@@ -1,0 +1,23 @@
+{
+	"manifest": {
+		"publishingInformation": {
+			"locales": {
+				"en-US": {
+					"name": "Alexa Custom Translate Skill",
+					"summary": "Translate text from one language to another then push to the Arduino display.",
+					"description": "This skill will accept English word, then it will translate it to the language of choice. It's made for an article",
+					"examplePhrases": [ 
+						"transcribe this",
+						"display this"
+					],
+					"keywords": []
+				}
+			},
+			"isAvailableWorldwide": true,
+			"testingInstructions": "Sample Testing Instructions.",
+			"category": "KNOWLEDGE_AND_TRIVIA",
+			"distributionCountries": []
+		},
+		"manifestVersion": "1.0"
+	}
+}

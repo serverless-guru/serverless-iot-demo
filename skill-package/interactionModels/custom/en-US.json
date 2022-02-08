@@ -1,0 +1,102 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "custom translate",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "Translate",
+                    "slots": [
+                        {
+                            "name": "language",
+                            "type": "AMAZON.SearchQuery",
+                            "samples": [
+                                "translate to {language}"
+                            ]
+                        },
+                        {
+                            "name": "word",
+                            "type": "AMAZON.SearchQuery",
+                            "samples": [
+                                "sentence {word}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "translate",
+                        "translate to",
+                        "start translating",
+                        "translation"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                }
+            ],
+            "types": [
+
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "Translate",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "language",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1256870445656.857872406751"
+                            }
+                        },
+                        {
+                            "name": "word",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.847811733160.1524691685124"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "prompts": [
+            {  
+                "id": "Elicit.Slot.1256870445656.857872406751",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "To which language?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.847811733160.1524691685124",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Which sentence you want to translate?"
+                    }
+                ]
+            }
+        ]
+    }
+}
